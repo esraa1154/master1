@@ -1,0 +1,88 @@
+/* تثبيت الشاشة */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* يمنع التمرير */
+    height: 100%;
+}
+
+/* تنسيق العنوان */
+.title {
+    z-index: 2;
+    text-align: center;
+    font-size: 80px;
+    color: #2d3250;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 3px 3px 5px #2d3250; /* ظل للنص */
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 3px 3px 5px #2d3250; /* ظل واضح للنص */
+}
+
+.pcss {
+    text-shadow: 3px 3px 5px #2d3250; /* ظل للنص */
+}
+/* تنسيق الحرف الكبير */
+.background-letter {
+    position: absolute;
+    top: 64%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+    font-size:192PX;
+    color: rgba(45, 50, 80, 0.1);
+    font-weight: bold;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.background-letter1 { 
+    position: absolute;
+    top: 84%; /* مكان الحرف الثاني */
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 156px;
+    color: rgba(45, 50, 80, 0.1);
+    font-weight: bold;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* تنسيق الحاوية للأزرار */
+.cellscss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    position: relative;
+    z-index: 1;
+    margin-top: 111px;
+}
+
+/* تنسيق الأزرار */
+button {
+    width: 200px;
+    height: 100px;
+    font-size: 30px;
+    font-family: serif;
+    color: #fff;
+    background-color: #2d3250;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #676f9d;
+    transform: scale(1.3);
+}
+
+button:active {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+

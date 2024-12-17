@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sheet.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">
+            <span><box-icon name='money-withdraw'></box-icon></span> <!-- أيقونة القائمة -->
+            MASTER
+        </div>
+        <div class="nav-links">
+            <a href="/choose_project">Home</a>
+            <a href="/input_page'">Enter Data</a>
+            <a href="/view_all_data">Display Data</a>
+            <a href="/filter_page">Filtered Data </a>
+            <a href="query_page">Query</a>
+        </div>
+    
+    </div>
+    <!--<h1 class="pcss">PROJECTS</h1>-->
+    <div class="background-letter">OVAL</div>
+    <div class="background-letter1">SHEETS</div>
+    <form action="/choose_sheet?project={{ project }}&department={{ department }}" method="POST">
+        <div class="cellscss">
+            <button type="submit" name="sheet" value="AP">AP Journal</button>
+            <button type="submit" name="sheet" value="AR">AR Journal</button>
+            <button type="submit" name="sheet" value="OVAL">OVAL</button>
+        </div>
+    </form>
+</body>
+</html>

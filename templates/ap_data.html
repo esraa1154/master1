@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Add AP Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ap_data.css') }}">    
+    </head>
+<body>
+    <h1>AP Data</h1>
+    <form action="/input_page" method="POST">
+        <table>
+            <tr>
+                <th>Name </th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>نوع المستند</td>
+                <td>
+                    <select name="نوع المستند" required>
+                        <option value="">-- Select--</option>
+                        <option value="قيود يوميه بنوك">قيود يوميه بنوك</option>
+                        <option value="قيود استلام  نقديه">قيود استلام  نقديه</option>
+                        <option value="قيود اوراق قبض">قيود اوراق قبض</option>
+                        <option value="ايصال استلام فيزا">ايصال استلام فيزا</option>
+                        <option value="قيود اوراق دفع">قيود اوراق دفع</option>
+                        <option value="قيود اوراق دفع">قيود اوراق دفع</option>
+                        <option value="قيود صرف">قيود صرف</option>
+                        <option value="إيصال دفع بنكي">إيصال دفع بنكي</option>    
+                        <option value="إيصال إستلام بنكي">إيصال إستلام بنكي</option>
+                        <option value="قيود تسويه ميزانيه">قيود تسويه ميزانيه</option>
+
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>رقم القيد</td>
+                <td><input type="text" name="رقم القيد" required></td>
+            </tr>
+            <tr>
+                <td>رقم الايصال</td>
+                <td><input type="text" name="رقم الايصال" required></td>
+            </tr>
+            <tr>
+                <td>تاريخ السداد</td>
+                <td><input type="date" name="تاريخ السداد" required></td>
+            </tr>
+            <tr>
+                <td>قيمة السداد</td>
+                <td><input type="number" name="قيمة السداد" required></td>
+            </tr>
+            <tr>
+                <td>التوجيه</td>
+                <td><input type="text" name="التوجيه" required></td>
+            </tr>
+            <tr>
+                <td>كود الحساب</td>
+                <td><input type="text" name="كود الحساب" required></td>
+            </tr>
+            <tr>
+                <td>اسم الحساب</td>
+                <td><input type="text" name="إسم الحساب" required></td>
+            </tr>
+            <tr>
+                <td>البيان</td>
+                <td><textarea name="البيان" required></textarea></td>
+            </tr>
+            <tr>
+                <td>رقم الشيك</td>
+                <td><input type="text" name="رقم الشيك" required></td>
+            </tr>
+            <tr>
+                <td>تاريخ الاستحقاق</td>
+                <td><input type="date" name="تاريخ الاستحقاق" required></td>
+            </tr>
+            <tr>
+                <td>البنك</td>
+                <td><input type="text" name="البنك" required></td>
+            </tr>
+            <tr>
+                <td>كود المورد</td>
+                <td><input type="text" name="كود المورد" required></td>
+            </tr>
+            <tr>
+                <td>اسم المورد</td>
+                <td><input type="text" name="اسم المورد" required></td>
+            </tr>
+            <tr>
+                <td>كود العميل</td>
+                <td><input type="text" name="كود العميل" required></td>
+            </tr>
+            <tr>
+                <td>اسم العميل</td>
+                <td><input type="text" name="اسم العميل" required></td>
+            </tr>
+            <tr>
+                <td>رقم العقد</td>
+                <td><input type="text" name="رقم العقد" required></td>
+            </tr>
+            <tr>
+                <td>رقم القسط</td>
+                <td><input type="text" name="رقم القسط" required></td>
+            </tr>
+            <tr>
+                <td>كود الوحدة</td>
+                <td><input type="text" name="كود الوحدة" required></td>
+            </tr>
+            <tr>
+                <td>رقم الفاتورة</td>
+                <td><input type="text" name="رقم الفاتورة" required></td>
+            </tr>
+            <tr>
+                <td>تاريخ القسط</td>
+                <td><input type="date" name="تاريخ القسط" required></td>
+            </tr>
+            <tr>
+                <td>نوع القسط</td>
+                <td><input type="text" name="نوع القسط" required></td>
+            </tr>
+            <tr>
+                <td>قيمة القسط</td>
+                <td><input type="number" name="قيمة القسط" required></td>
+            </tr>
+        </table>
+        <button type="submit">ADD</button>
+    </form>
+</body>
+</html>

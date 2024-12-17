@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>عرض البيانات وتعديلها</title>
+</head>
+<body>
+    <h1>عرض البيانات وتعديلها</h1>
+    <form method="GET" action="/edit">
+        <button type="submit">تصفية</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <!-- إنشاء حقول الفلترة -->
+                    {% for column in [
+                        "نوع المستند", "رقم القيد", "رقم الايصال", "تاريخ السداد", "قيمة السداد", "التوجيه", 
+                        "كود الحساب", "إسم الحساب", "البيان", "رقم الشيك", "تاريخ الاستحقاق", "البنك", 
+                        "كود المورد", "اسم المورد", "كود العميل", "اسم العميل", "رقم العقد", "رقم القسط", 
+                        "الشهر", "السنة","id", "كود الوحدة", "رقم الفاتورة", "تاريخ القسط", "نوع القسط", "قيمة القسط"
+                    ] %}
+                        <th><input type="text" name="filter_{{ column }}" placeholder="فلتر {{ column }}"></th>
+                    {% endfor %}
+                    <th>Edit</th> <!-- زر التعديل -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                    <tr>
+                        <!-- عرض القيم لكل سجل -->
+                        {% for value in entry %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                        <td><a href="/input_page">Edit</a></td> <!-- رابط التعديل بناءً على id -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </form>
+</body>
+</html>

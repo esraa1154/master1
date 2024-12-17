@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ap_data.css') }}">    
+
+
+    <title>تأكيد الحذف</title>
+</head>
+<body>
+    <h2>هل أنت متأكد من حذف هذا السجل؟</h2>
+    <table>
+    <tr>
+        {% for field in data %}
+        <li>{{ field }}</li>
+        {% endfor %}
+    </tr>
+   </table>
+    <!-- فورم الحذف -->
+    <form action="{{ url_for('delete_entry', entry_id=data[20]) }}" method="POST">
+        <button type="submit">نعم، حذف</button>
+        <a href="{{ url_for('view_all_data') }}">إلغاء</a>
+    </form>
+</body>
+</html>

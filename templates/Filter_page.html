@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>فلترة البيانات</title>
+</head>
+<body>
+    <h1>فلترة البيانات</h1>
+    <form action="/filter_data" method="POST">
+        <label for="column_name">  العمود
+        </label>
+        <select id="column_name" name="column_name" required>
+            <option value="نوع المستند">نوع المستند</option>
+            <option value="رقم القيد">رقم القيد</option>
+            <option value="رقم الايصال">رقم الايصال</option>
+            <option value="تاريخ السداد">تاريخ السداد</option>
+            <option value="قيمة السداد">قيمة السداد</option>
+            <option value="التوجيه">التوجيه</option>
+            <option value="كود الحساب">كود الحساب</option>
+            <option value="إسم الحساب">إسم الحساب</option>
+            <option value="البيان">البيان</option>
+            <option value="رقم الشيك">رقم الشيك</option>
+            <option value="تاريخ الاستحقاق">تاريخ الاستحقاق</option>
+            <option value="البنك">البنك</option>
+            <option value="كود المورد">كود المورد</option>
+            <option value="اسم المورد">اسم المورد</option>
+            <option value="كود العميل">كود العميل</option>
+            <option value="اسم العميل">اسم العميل</option>
+            <option value="رقم العقد">رقم العقد</option>
+            <option value="رقم القسط">رقم القسط</option>
+            <option value="الشهر">الشهر</option>
+            <option value="السنة">السنة</option>
+            <option value="id">id</option>
+            <option value="كود الوحدة">كود الوحدة</option>
+            <option value="رقم الفاتورة">رقم الفاتورة</option>
+            <option value="تاريخ القسط">تاريخ القسط</option>
+            <option value="نوع القسط">نوع القسط</option>
+            <option value="قيمة القسط">قيمة القسط</option>
+        </select>
+        <br><br>
+        <label for="filter_value">القيمة </label>
+        <input type="text" id="filter_value" name="filter_value" required>
+        <br><br>
+        <button type="submit">تنفيذ الفلترة</button>
+    </form>
+</body>
+</html>

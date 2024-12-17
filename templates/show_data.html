@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ap_data.css') }}">  
+      
+    <style>
+        h2{
+            text-align:center
+        }
+        /* تنسيق عام للأزرار */
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color:rgb(11, 76, 145); /* لون أزرق */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            margin: 10px; /* مسافة بين الأزرار */
+        }
+
+        /* استايل إضافي لزر الحذف */
+        .btn.delete {
+            background-color:rgb(150, 21, 34); /* لون أحمر */
+        }
+
+        /* استايل إضافي لزر التعديل */
+        .btn.edit {
+            background-color: #2d3250; /* لون أخضر */
+        }
+
+        /* عند تمرير الماوس */
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+    <title>Display Data </title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Oval AP Journal</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>نوع المستند</th>
+                    <th>رقم القيد</th>
+                    <th>رقم الايصال</th>
+                    <th>تاريخ السداد</th>
+                    <th>قيمة السداد</th>
+                    <th>التوجيه</th>
+                    <th>كود الحساب</th>
+                    <th>إسم الحساب</th>
+                    <th>البيان</th>
+                    <th>رقم الشيك</th>
+                    <th>تاريخ الاستحقاق</th>
+                    <th>البنك</th>
+                    <th>كود المورد</th>
+                    <th>اسم المورد</th>
+                    <th>كود العميل</th>
+                    <th>اسم العميل</th>
+                    <th>رقم العقد</th>
+                    <th>رقم القسط</th>
+                    <th>الشهر</th>
+                    <th>السنة</th>
+                    <th>id</th>
+                    <th>كود الوحدة</th>
+                    <th>رقم الفاتورة</th>
+                    <th>تاريخ القسط</th>
+                    <th>نوع القسط</th>
+                    <th>قيمة القسط</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('edit_entry', entry_id=row[20]) }}" class="btn edit">تعديل</a>
+                        <a href="{{ url_for('confirm_delete', entry_id=row[20]) }}" class="btn delete">حذف</a>
+                    </td>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                    <td>{{ row[11] }}</td>
+                    <td>{{ row[12] }}</td>
+                    <td>{{ row[13] }}</td>
+                    <td>{{ row[14] }}</td>
+                    <td>{{ row[15] }}</td>
+                    <td>{{ row[16] }}</td>
+                    <td>{{ row[17] }}</td>
+                    <td>{{ row[18] }}</td>
+                    <td>{{ row[19] }}</td>
+                    <td>{{ row[20] }}</td>
+                    <td>{{ row[21] }}</td>
+                    <td>{{ row[22] }}</td>
+                    <td>{{ row[23] }}</td>
+                    <td>{{ row[24] }}</td>
+                    <td>{{ row[25] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

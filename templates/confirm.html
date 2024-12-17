@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/confirm.css') }}">
+</head>
+<body>
+    <h2>تأكيد البيانات</h2>
+    <form method="POST" action="{{ url_for('submit_input') }}">
+        <input type="text" name="نوع المستند" value="{{ نوع_المستند }}" required>
+        <input type="text" name="رقم القيد" value="{{ رقم_القيد }}" required>
+        <input type="text" name="رقم الايصال" value="{{ رقم_الايصال }}" required>
+        <input type="date" name="تاريخ السداد" value="{{ تاريخ_السداد }}" required>
+        <input type="number" name="قيمة السداد" value="{{ قيمة_السداد }}" required>
+        <input type="text" name="التوجيه" value="{{ التوجيه }}" required>
+        <input type="text" name="كود الحساب" value="{{ كود_الحساب }}" required>
+        <input type="text" name="إسم الحساب" value="{{ إسم_الحساب }}" required>
+        <textarea name="البيان" required>{{ البيان }}</textarea>
+        <input type="text" name="رقم الشيك" value="{{ رقم_الشيك }}" required>
+        <input type="date" name="تاريخ الاستحقاق" value="{{ تاريخ_الاستحقاق }}" required>
+        <input type="text" name="البنك" value="{{ البنك }}" required>
+        <input type="text" name="كود المورد" value="{{ كود_المورد }}" required>
+        <input type="text" name="اسم المورد" value="{{ اسم_المورد }}" required>
+        <input type="text" name="كود العميل" value="{{ كود_العميل }}" required>
+        <input type="text" name="اسم العميل" value="{{ اسم_العميل }}" required>
+        <input type="text" name="رقم العقد" value="{{ رقم_العقد }}" required>
+        <input type="text" name="رقم القسط" value="{{ رقم_القسط }}" required>
+        <input type="hidden" name="الشهر" value="{{ الشهر }}">
+        <input type="hidden" name="السنه" value="{{ السنة }}">
+        <input type="text" name="id" value="{{ id }}">
+        <input type="text" name="كود الوحدة" value="{{ كود_الوحدة }}" required>
+        <input type="text" name="رقم الفاتورة" value="{{ رقم_الفاتورة }}" required>
+        <input type="date" name="تاريخ القسط" value="{{ تاريخ_القسط }}" required>
+        <input type="text" name="نوع القسط" value="{{ نوع_القسط }}" required>
+        <input type="number" name="قيمة القسط" value="{{ قيمة_القسط }}" required>
+        <button type="submit">إرسال البيانات</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تعديل البيانات</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: right;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        input {
+            width: 95%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>تعديل البيانات</h1>
+    <form method="POST" action="/edit/{{ entry['id'] }}">
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم الحقل</th>
+                    <th>القيمة</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for column, value in entry.items() %}
+                <tr>
+                    <td><label for="{{ column }}">{{ column }}</label></td>
+                    <td><input id="{{ column }}" name="{{ column }}" value="{{ value }}"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">حفظ</button>
+    </form>
+</body>
+</html>

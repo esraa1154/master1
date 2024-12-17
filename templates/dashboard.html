@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dash.css') }}">
+</head>
+<body action="/input_page" method="POST">
+    <h1>Segment</h1>
+    <div class="cellscss">
+    <button onclick="location.href='/input_page'">Enter Data</button>
+    <button onclick="location.href='/view_all_data'">Display Data</button>
+    <button onclick="location.href='/filter_page'">Filtered Data</button>
+    <button onclick="location.href='/query_page'">ADD Query</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/* تنسيق الشريط العلوي */
+.navbar {
+    background-color: #2d3250; /* لون الخلفية */
+    display: flex;
+    align-items: center; /* محاذاة رأسية */
+    padding: 24px 20px; /* المسافة الداخلية */
+    border-bottom: 2px solid #424769; /* خط سفلي */
+    position: fixed; /* شريط تنقل ثابت */
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    z-index: 1000; /* فوق كل العناصر الأخرى */
+}
+
+/* تنسيق العنوان (Brand) */
+.navbar .brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* أيقونة بسيطة */
+.navbar .brand span {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+/* تنسيق الروابط */
+.navbar .nav-links {
+    display: flex;
+    gap: 50px; /* مسافة بين الروابط */
+    margin-left:20%
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: white;
+    padding: 8px;
+    color: #424769; /* لون عند التمرير */
+    border: 2px solid #424769; /* إضافة بوردر عند التمرير */
+    font-size: 16px;
+}
+
+.navbar .nav-links a:active {
+    background-color: #f0f0f0; /* اختر اللون الذي تريده عند الضغط */
+    color: #424769;
+    font-size: 15px;
+   
+}
